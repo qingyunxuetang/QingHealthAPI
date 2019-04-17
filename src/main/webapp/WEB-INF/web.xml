@@ -7,11 +7,19 @@
 
     <servlet>
         <servlet-name>NewsDetailServlet</servlet-name>
-        <servlet-class>com.qingyunxuetang.qinghealth.NewsDetailServlet</servlet-class>
+        <servlet-class>com.qingyunxuetang.qinghealth.servlet.NewsDetailServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>NewsDetailServlet</servlet-name>
         <url-pattern>/news/detail</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>NewsListServlet</servlet-name>
+        <servlet-class>com.qingyunxuetang.qinghealth.servlet.NewsListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewsListServlet</servlet-name>
+        <url-pattern>/news/list</url-pattern>
+    </servlet-mapping>
 </web-app>
