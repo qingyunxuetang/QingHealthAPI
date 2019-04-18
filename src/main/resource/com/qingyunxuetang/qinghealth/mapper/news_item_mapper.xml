@@ -2,8 +2,17 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zjr.test.mybatis.BlogMapper">
-    <select id="selectNewsItem" resultType="com.qingyunxuetang.qinghealth.model.NewsItemModel">
+<mapper namespace="com.qingyunxuetang.qinghealth.NewsItemMapper">
+    <select id="selectNewsItem" resultType="com.qingyunxuetang.qinghealth.bean.NewsItemBean">
 		select * from news_item where id = #{id}
 	</select>
+	<!-- 查询所有条目 -->
+	<select id="queryAll" resultType="com.qingyunxuetang.qinghealth.bean.NewsItemBean" >
+		select * from news_item
+	</select>
+
+	<!-- 插入一条记录 -->
+	<insert id="insert" parameterType="com.qingyunxuetang.qinghealth.bean.NewsItemBean">
+		insert into news_item(id , title, brief, author, image_url) values(#{id} , #{title}, #{brief}, #{author}, #{imageUrl})
+	</insert>
 </mapper>
